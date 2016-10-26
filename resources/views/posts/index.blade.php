@@ -10,8 +10,16 @@
     <h1>Blog</h1>
 
     @foreach($posts as $post)
-        <h2>{{ $post->title }}</h2> <i>{{$post->created_at}}</i>
+        <h2>{{ $post->title }}</h2>
+        <b>Create:</b> <i>{{$post->created_at}}</i>
         <p>{{ $post->content }}</p>
+
+        <h3>Comments</h3>
+        @foreach($post->comments as $comment)
+            <b>Nome: </b> {{ $comment->name }} <br>
+            <b>Comment: </b> {{ $comment->comment }}
+        @endforeach
         <hr>
+
     @endforeach
 @endsection

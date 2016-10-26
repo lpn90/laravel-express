@@ -8,13 +8,13 @@ class Comment extends Model
 {
     protected $fillable = [
         'post_id',
-        'comment',
-        'nome',
+        'name',
         'email',
+        'comment'
     ];
-    
+
     public function post()
     {
-        return $this->belongsTo('App\Post'); //Retorna o Post do Comentário
+        return $this->belongsTo('App\Post');
     }
 }

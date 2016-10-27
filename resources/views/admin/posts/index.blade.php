@@ -10,7 +10,7 @@
     <h1>Blog Admin</h1>
     <br>
     <br>
-    <a href="{{ route('admin.posts.create') }}" class="btn btn-success">Create Post</a>
+    <a href="{{ route('admin.posts.create') }}" class="btn btn-success">Create new Post</a>
     <br>
     <br>
     <table class="table">
@@ -25,7 +25,7 @@
                 <td>{{ $post->id }}</td>
                 <td>{{ $post->title }}</td>
                 <td>
-                    <a href="{{ route('admin.posts.edit', ['id'=>$post->id]) }}" class="btn btn-default">Edit</a>
+                    <a href="{{ route('admin.posts.edit', ['id'=>$post->id]) }}" class="btn btn-primary">Edit</a>
                     <a href="{{ route('admin.posts.destroy', ['id'=>$post->id]) }}" class="btn btn-danger">Destroy</a>
                 </td>
             </tr>
